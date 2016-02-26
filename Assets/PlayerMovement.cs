@@ -13,21 +13,23 @@ public class PlayerMovement : GObject {
 	// Update is called once per frame
     public override void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        direction = Vector3.zero;
+
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             direction.x = -1;
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
-            direction.x=1;
+            direction.x = 1;
         }
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow))
         {
-            direction.y=-1;
+            direction.y = -1;
         }
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
         {
-            direction.y=1;
+            direction.y = 1;
         }
 
         base.Update();
